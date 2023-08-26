@@ -1,0 +1,21 @@
+[package]
+name = "impossible-day-wiki"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0.186"
+serde_json = "1.0.105"
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"]}
+warp = "0.3.5"
+xdg = "2.5.2"
+
+[dependencies.uuid]
+version = "1.4.1"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
